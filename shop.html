@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+        margin: auto;
+    }
+    table,
+    tr,
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+    
+
+</style>
+</head>
+<body>
+
+    <h1 id="header">Mobiles R Us </h1>
+
+    <div>
+
+    <table>
+        <tr>
+            <th>Phone</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Amazon</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>iPhone 12 Pro</td>
+            <td>New Apple iPhone 12 Pro (256GB) - Pacific Blue</td>
+            <td><img height="100" width="100" src="pics\iphone-12-pro-family-hero.jfif" alt="Image not availablein your browser"></td>
+            <td><a href="https://amzn.to/3licZwr">Amazon link</a></td>
+            <td>£1100</td>
+          </tr>
+          <tr>
+            <td>Galaxy S10 </td>
+            <td>Samsung Galaxy S10 Mobile Phone; Sim Free Smartphone - Prism Black (UK Version)</td>
+            <td><img height="100" width="100" src="pics\samsung s10.jfif" alt="Image not available in your browser"></td>
+            <td><a href="https://amzn.to/2OXzf2c">Amazon link</a></td>
+            <td>£500</td>
+          </tr>
+          <tr>
+            <td>Huawei P30</td>
+            <td>Huawei P30 Pro 128 GB 6.47 Inch OLED Display Smartphone with Leica Quad AI Camera, 8GB RAM, EMUI 9.1.0 Sim-Free Android Mobile Phone, Single SIM, Aurora, UK Version</td>
+            <td><img height="80" width="80" src= "pics\p30.jfif" alt="Image not available in your browser"></td>
+            <td><a href="https://amzn.to/3qNCJSm">Amazon link</a></td>
+            <td>£450</td>
+          </tr>
+          <tr>
+            <td>Xiaomi Redmi Note 9 </td>
+            <td>Xiaomi Redmi Note 9 4GB/128GB Midnight Grey (UK Version + Official 2 Year Warranty)</td>
+            <td><img height="100" width="100" src="pics\red note 9.jfif" alt="Image not available in your browser"></td>
+            <td><a href="https://www.amazon.co.uk/Xiaomi-Midnight-Version-Official-Warranty/dp/B08HJLGGX4/ref=sr_1_3?dchild=1&keywords=xiaomi+redmi+note+9&qid=1615819008&sr=8-3">Amazon link</a></td>
+            <td>£130</td>
+          </tr>
+          <tr>
+            <td>Nokia 2.4</td>
+            <td>Nokia 2.4 6.5 Inch Android UK SIM-Free Smartphone with 2GB RAM and 32GB Storage (Dual SIM) - Fjord</td>
+            <td><img height="100" width="100" src="pics\nokia-2-4-.jpg" alt="Image not available in your browser"></td>
+            <td><a href="https://www.amazon.co.uk/Nokia-Android-SIM-Free-Smartphone-Storage/dp/B08J7GFSGV/ref=sr_1_3?dchild=1&keywords=nokia&qid=1615803966&sr=8-3">Amazon link</a></td>
+            <td>£100</td>
+          </tr>
+    </table>
+
+    </div>
+
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="1" placedholder="Your message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer><h3>Mobiles R Us</h3>
+        <p id="address">103 Tachbrook St, Pimlico, London SW1V 2QA</p>
+    </footer>
+
+    <script>
+
+        const changeHeader = function(str){
+            let pageHeader = document.getElementById("header")
+            pageHeader.innerText = str
+        }
+
+        const changeBgColor = function(color){
+          document.body.style.backgroundColor = color
+        }
+
+        const changeAddress = function(newAddress){
+          let address = document.getElementById("address")
+          address.innerText = newAddress
+        }
+
+        const addClass = function(){
+          let amazonLinks = document.getElementsByTagName("a")
+          for(i=0; i<amazonLinks.length; i++)
+          amazonLinks[i].classList.add("links")
+  
+        }
+
+    
+        
+    </script>
+</body>
+</html>
