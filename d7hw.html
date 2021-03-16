@@ -21,11 +21,15 @@
   <main>
     <hr />
 
+  <section>
+
     <ul id="firstList">
       <li>1st</li>
       <li>2nd</li>
       <li>3rd</li>
     </ul>
+
+  </section>
 
     <ul id="secondList">
       <li>1st</li>
@@ -162,12 +166,12 @@
 
 
       const makeItClickable = function () {
+        let color = getRandomColor()  
         let title = document.getElementsByTagName("h1")
-        console.log(title);
-        let color = getRandomColor()
+        
         for (i = 0; i < title.length; i++)
         
-        title[i].style.color = color
+        title[0].style.color = color
         
       };
 
@@ -175,31 +179,32 @@
       Change the footer text with something else when the user clicks on it.
       */
 
-      const changeFooterText = function () {
+      const changeFooterText = function (newText) {
 
         let footerText = document.getElementsByTagName("p")
         for (i = 0; i < footerText.length; i++)
-        
-
-
-        
-      
-        
+        footerText[1].innerText = newText
       };
 
       /* EXERCISE 11
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
       */
 
-      const inputField = document.getElementById("input-field");
-      // ...
+      let inputField = document.getElementById("input-field");
 
+      function returnKeystrokeValue() {
+
+        let value = inputField.value
+        console.log(value);
+      }
+
+      inputField.addEventListener("keydown", returnKeystrokeValue)
       /* EXERCISE 12
       Create a new welcome alert message when the page successfully loads.
       */
 
       window.onload = function () {
-        //
+        alert("Welcome to this page")
       };
 
       /* EXERCISE 13
