@@ -19,7 +19,6 @@
         margin-bottom: 20px;
         border: 3px solid #1b1b1b;
         border-radius: 8px
-   
     }
 
     .cells{
@@ -34,17 +33,11 @@
 
     </style>
 
-
 </head>
 <body>
     <h1>Kai's Bingo Game</h1>
 
     <div id="bingoBoard">
-
-       
-
-
-
 
     </div>
 
@@ -58,7 +51,6 @@
         </h4>
     </div>
     
-
     <script>
 
         /*BINGO CHALLENGE!!!
@@ -93,38 +85,39 @@
     }
 }
 
-
-const randomNumber = function(){
-
+const randomNumber = function (){
+    
     let result = Math.round(Math.random() * (77 -1) + 1 )
 
-    let parent = document.getElementsByTagName("h4")
-
-    parent.innerText = result
-
     return result
-    
 }
 
-const matchNumbers = function () {
 
-    let result = []
 
+let array = []
+
+const numbersInArray = function () {
+
+   
     let cells = document.getElementsByTagName("h3")
-
-    let cellsValue = parsecells.innerText
-
-    console.log(cells);
-
-    console.log(cellsValue);
-  
 
     for (x = 0; x < cells.length; x++)
 
-   
+    array.push(parseInt(cells[x].innerText))
 
+    return array
+}
+
+
+const match = function () {
     
-    return result
+    for (i = 0; i < array.length; i++)
+
+        if(randomNumber() === array[i])
+        {
+            return true
+        }
+    
 }
 
 
