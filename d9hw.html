@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Mania</title>
+    
+    <style>
+
+        body{background-color: rgb(63, 62, 62); color: white;}
+
+    #bingoBoard {
+
+        background-color: #21b83a;
+        color: rgb(255, 255, 255);
+        width: 100%;
+        max-width: 768px;
+        margin-bottom: 20px;
+        border: 3px solid #1b1b1b;
+        border-radius: 8px
+   
+    }
+
+    .cells{
+        display: inline-block;
+        position: relative; 
+        width: 5%;
+        text-align: center;
+        height: 60px;
+        border: 1px solid;
+
+    }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Kai's Bingo Game</h1>
+
+    <div id="bingoBoard">
+
+       
+
+
+
+
+    </div>
+
+    <div>
+        <input type="button" value="Play Bingo" id="button" onclick="randomNumber()">
+    </div>
+
+    <div id="result">
+        <h4>
+
+        </h4>
+    </div>
+    
+
+    <script>
+
+        /*BINGO CHALLENGE!!!
+        Create programmatically (with JS) a BINGO board with 76 cells, from 1 to 76.
+        Create a button to randomize a number from 1 to 76. The same number should be highlighted on the bingo board
+
+        EXTRA: 
+        - Take ALWAYS a new number (eg. avoid randoming the number 10 3 times)
+        - Create a USER BOARD with 24 randomized numbers that highlights as the main board does
+        - Let the user choose HOW MANY user boards he's willing to play with and create them.*/
+
+
+    let numberOfCells = 76
+
+    let board = document.getElementById("bingoBoard")
+
+    window.onload = function() {
+
+        for(i = 0; i < numberOfCells; i++){
+    
+
+    let boardCells = document.createElement("div")
+    let cell = document.createElement("h3")
+    boardCells.classList.add("cells")
+   
+    let = cellNumber = i + 1
+    cell.innerText = cellNumber
+
+    boardCells.appendChild(cell)
+    board.appendChild(boardCells)
+    
+    }
+}
+
+
+const randomNumber = function(){
+
+    let result = Math.round(Math.random() * (77 -1) + 1 )
+
+    let parent = document.getElementsByTagName("h4")
+
+    parent.innerText = result
+
+    return result
+    
+}
+
+const matchNumbers = function () {
+
+    let result = []
+
+    let cells = document.getElementsByTagName("h3")
+
+    let cellsValue = parsecells.innerText
+
+    console.log(cells);
+
+    console.log(cellsValue);
+  
+
+    for (x = 0; x < cells.length; x++)
+
+   
+
+    
+    return result
+}
+
+
+    </script>
+</body>
+</html>
