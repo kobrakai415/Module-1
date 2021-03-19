@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 Homework</title>
+
+    <style>
+
+        body{
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        a{
+            color: orange;
+        }
+
+        .borderclass{
+            border: black solid 3px;
+        }
+
+        table{
+            border: rgb(65, 64, 64) 2px solid;
+            border-radius: 5px;
+        }
+
+        p{
+            margin: 25px;
+        }
+        .fontclass{
+            font-size: 200px;
+            font-weight: bold;
+        }
+
+        .hide{
+            display: none;
+        }
+        
+        td{
+            border: green 1px solid;
+        }
+
+        th{
+            border: red dotted 1px;
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <h1 id="header">This is the heading</h1>
+    
+    <ol>
+
+        <li> Day 1 HW</li>
+        <li> Day 2 HW</li>
+        <li> Day 3 HW</li>
+        <li> Day 4 HW</li>
+        <li> Day 5 HW</li>
+
+    </ol>
+
+    <hr>
+
+    <table>
+        <div>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Address</th>
+
+        <tr>
+            <td>Kai</td>
+            <td><img height="100" width="100" src="D10\pics\elon.jpg" alt="image not available"><a href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg">link</a></td>
+            <td>23</td>
+            <td>kai.kadir@hotmail.co.uk</td>
+            <td>58 Wentworth Court 4 Gatliff Road</td>
+        </tr>
+        <tr>
+            <td>Kai</td>
+            <td><img height="100" width="100" src="D10\pics\peter.jfif" alt="image not available"><a href="data:image/jpeg;base64,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">link</a></td>
+            <td>23</td>
+            <td>kai.kadir@hotmail.co.uk</td>
+            <td>58 Wentworth Court 4 Gatliff Road</td>
+        </tr>
+        <tr>
+            <td>Kai</td>
+            <td><img src="D10\pics\jeff.jfif" alt="image not available"><a href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg">link</a></td>
+            <td>23</td>
+            <td>kai.kadir@hotmail.co.uk</td>
+            <td>58 Wentworth Court 4 Gatliff Road</td>
+        </tr>
+    </div>
+    </table>
+
+    <input type="button" value="Hide Images" id="hide">
+
+    <section>
+
+        <p>
+            Nested paragraph
+        </p>
+
+        <ul>
+            <li>nested list item 1</li>
+            <li>nested list item 2</li>
+
+        </ul>
+    </section>
+
+    <footer>
+        The page creator is Kai, he is 23 and from London.
+    </footer>
+<script>
+    let x = "John"
+    let y = "Doe"
+
+    console.log(x, "<>", y);
+
+    const user = {
+        name: "kai",
+        surname: "kadir",
+        email: "kai.kadir@hotmail.co.uk",
+    }
+
+    console.log(user);
+
+delete user.email
+
+let arrayMonths = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October"]
+
+console.log(arrayMonths);
+
+let random = []
+
+function randomArray() {
+    
+    
+    for (i = 0; i < 100; i++) {
+        number = Math.round(Math.random() * (100 - 1) + 1)
+        random.push(number)
+    }
+    console.log(random);
+}
+
+randomArray()
+
+function getMaxAndMin() {
+    maxNum = Math.max(...random)
+    minNum = Math.min(...random)
+
+    console.log(maxNum);
+    console.log(minNum);
+}
+
+let arrayOfArrays = []
+
+let array1 = []
+let array2 = []
+let array3 = []
+
+
+function randomArray2() {
+
+    for (i = 0; i < 10; i++) {
+        number1 = Math.round(Math.random() * (10 - 1) + 1)
+        number2 = Math.round(Math.random() * (10 - 1) + 1)
+        number3 = Math.round(Math.random() * (10 - 1) + 1)
+
+        array1.push(number1)
+        array2.push(number2)
+        array3.push(number3)
+        
+    }
+
+    arrayOfArrays.push(array1)
+    arrayOfArrays.push(array2)
+    arrayOfArrays.push(array3)
+
+    console.log(array1, array2, array3);
+    console.log(arrayOfArrays);
+    
+}
+
+let longArray = [1, 2, 3, 4]
+let shortArray = [1, 2]
+
+const returnLongArray = function(a, b) {
+    a.length > b.length ? console.log(a): console.log(b);
+}
+
+returnLongArray(longArray, shortArray)
+
+const total = function(a) {
+    let sum = 0
+
+    for(i = 0; i < a.length; i++) {
+        sum = sum + a[i]
+    }
+    return sum 
+}
+
+const compareTwoArrays = function(a, b) {
+
+const total = function(a) {
+    let sum = 0
+
+    for(i = 0; i < a.length; i++) {
+        sum = sum + a[i]
+    }
+    return sum 
+}
+
+    total(a) > total(b) ? console.log(total(a)): console.log(total(b));
+
+}
+
+
+let header = document.getElementById("header")
+
+let tableData = document.getElementsByTagName("td")
+
+for(i = 0; i < tableData.length; i++) {
+    console.log(tableData[i].innerText);
+}
+
+const changeHeader = function(a) {
+    header.innerText = a
+}
+
+const addRow = function() {
+    let parent = document.querySelector("tbody")
+    let child = document.createElement("tr")
+     
+
+    parent.append(child)
+
+}
+let child = document.createElement("tr")
+
+let parent = document.querySelector("tbody")
+console.log(parent);
+console.log(child);
+
+const addClass = function() {
+    let tableRows = document.getElementsByTagName("tr")
+    for(i = 0; i < tableRows.length; i++) {
+        tableRows[i].classList.add("test")
+    }
+    
+}
+
+const redBackground = function() { 
+    let links = document.getElementsByTagName("a")
+    for(i = 0; i < links.length; i++) {
+        links[i].style.backgroundColor = "red"
+    }
+}
+
+const addNew = function(a) { 
+    let list = document.getElementsByTagName("ol")
+    
+    let child = document.createElement("li")
+    child.innerText = a 
+    for(i = 0; i < list.length; i++) {
+        list[i].appendChild(child)
+
+    }
+
+}
+
+const emptyList = function() {
+    let list = document.getElementsByTagName("ol") 
+    
+    for(i = 0; i < list.length; i++) {
+        list[i].removeChild()
+    }
+    
+}
+
+let links = document.getElementsByTagName("a")
+
+const alert = function() {
+    for(i = 0; i < links.length; i++) {
+
+        links.addeventlistener("onmouseover", alert)
+    }
+}
+
+let hide = document.getElementById("hide")
+let images = document.getElementsByTagName("img")
+
+
+hide.onclick = function() {
+    for(i = 0; i < images.length; i++) {
+        images[i].style.display = "none"
+    }
+
+}
+
+let cells = document.getElementsByTagName("td")
+
+function pinkCell() {
+    let cells = document.getElementsByTagName("td")
+    cells.classList.add("cells")
+    for(i = 0; i < cells.length; i++) {
+        cells[i].style.display = "none"
+    }   
+}
+
+cells.addeventlistener(onclick, pinkCell)
+
+
+function removeTable(){
+    let table = document.getElementsByTagName("table")
+    console.log(table);
+    for(i = 0; i < table.length; i++) {
+        table[i].style.display = "none"
+
+
+    }
+
+}
+
+
+window.onload = onsole.log("Page loaded"); 
+
+</script>
+</body>
+</html>
+
+<!-- HTML EXERCISES
+
+1) Create a title for the page x
+2) Create a heading x
+3) Create an ordered list x
+4) Create a table with 5 columns and 4 rows x 
+5) Add an image to each second cell of every row x 
+6) Add a anchor link for every image x
+7) Merge together 2 table cells x 
+8) Divide the page using a horizontal line x 
+9) Create a container with a nested paragraph and a nested unordered list x
+10) Create a footer with some information about the page creator x
+
+CSS EXERCISES
+
+11) Give a maximum width to the body and center it in the page x
+12) Set every h1 to be centered x
+13) Change the color of each link in the page x
+14) Create a class with a border x
+15) Set table to have rounded corners x
+16) Add margin between every paragraph x
+17) Create a class which change font size and boldness x
+18) Create a class to hide a content x
+19) Add a green border to each td x
+20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) ) x
+
+JS EXERCISES
+
+21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" x
+22) Create an object with properties such name, surname, email x
+23) Delete Email from the previously created object x
+24) Create an array with 10 strings in it x
+25) Print in the console every string in the previous array x
+26) Create an array with 100 random numbers in it x
+27) Wrote a function to get the MAX and the MIN from the previously created array x
+28) Create an array of arrays, in which every array has 10 random numbers 
+29) Create a function that gets 2 arrays and returns the longest one
+30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+
+DOM 
+
+31) Get element with ID "container" from the page
+32) Get every "td" from the page
+33) Create a cycle that prints the text inside every td of the page
+34) Write a function to change the heading of the page
+35) Write a function to add an extra row to the table
+36) Write a function to add the class "test" to each row in the table
+37) Write a function to add a red background to every link in the page
+38) Console log "Page loaded" when the page is correctly loaded
+39) Write a function to add new items to a UL
+40) Write a function to empty a list
+
+EXTRA 
+
+41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+42) Add a button to hide every image on the page
+43) Add a button to hide and show the table from the page
+44) Write a function to sum every number inside the TD (if the content is numeric)
+45) Delete the last letter from the title each time the user clicks on it
+46) Change a single TD background color when the user clicks on it
+47) Add a button DELETE, on click it should delete a random TD from the page
+48) Add a pink border to a cell when the mouse is over it
+49) Write a function to add a table with 4 rows and 3 columns programmatically
+50) Write a function to remove the table from the page
+-->
