@@ -121,7 +121,19 @@ console.log(cutString("hello"));
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-
+const giveMeRandom = function(n){
+    let arrayN = []
+  
+  
+    for (let i=0; i < n; i++) {
+       
+        arrayN.push(Math.round(Math.random()*10))
+    }
+  
+    return arrayN
+  }
+  
+  console.log(giveMeRandom(5))
 
 
 /* WHEN YOU ARE FINISHED

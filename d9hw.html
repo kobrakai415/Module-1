@@ -8,7 +8,11 @@
     
     <style>
 
-        body{background-color: rgb(63, 62, 62); color: white;}
+        body{
+            background-color: rgb(63, 62, 62); color: white;
+            max-width: 800px;
+            margin: auto;
+        }
 
     #bingoBoard {
 
@@ -29,6 +33,10 @@
         height: 60px;
         border: 1px solid;
 
+    }
+
+    h1 {
+        text-align: center;
     }
 
     </style>
@@ -85,40 +93,22 @@
     }
 }
 
-const randomNumber = function (){
-    
-    let result = Math.round(Math.random() * (77 -1) + 1 )
 
-    return result
+const randomNumber = function () {
+
+    let cells = document.getElementsByClassName("cells")
+
+        let result = Math.round(Math.random() * 76 )
+        console.log(result);
+        cells[result].style.color = "black"
+
+    
+
+
 }
 
 
 
-let array = []
-
-const numbersInArray = function () {
-
-   
-    let cells = document.getElementsByTagName("h3")
-
-    for (x = 0; x < cells.length; x++)
-
-    array.push(parseInt(cells[x].innerText))
-
-    return array
-}
-
-
-const match = function () {
-    
-    for (i = 0; i < array.length; i++)
-
-        if(randomNumber() === array[i])
-        {
-            return true
-        }
-    
-}
 
 
     </script>

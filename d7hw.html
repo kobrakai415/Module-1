@@ -83,10 +83,12 @@
       */
 
       const changePcontent = function (newText) {
-        let div = document.getElementsByTagName("div")
-        for(i=0; i<div.length; i++)
-        div[0].innerText = newText
-      
+        let div = document.querySelectorAll("div p")
+        div.forEach((p) => {
+          p.innerText = newText
+
+        })
+    
       };
 
       /* EXERCISE 4
@@ -96,7 +98,7 @@
       const changeUrls = function () {
         let links = document.getElementsByTagName("a")
         for(i=0; i<links.length; i++)
-        links.href = "https://www.google.com"
+        links[i].href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -118,8 +120,7 @@
 
       const addParagraph = function (content) {
         let divP = document.getElementsByTagName("div")
-        console.log(divP);
-
+  
         let newP = document.createElement("p")
         newP.innerText = content
 
@@ -143,8 +144,6 @@
 
       const paintItGreen = function () {
         let listColor = document.getElementsByTagName("ul")
-
-        console.log(listColor);
 
         for(i = 0; i < listColor.length; i++)
 
@@ -179,12 +178,14 @@
       Change the footer text with something else when the user clicks on it.
       */
 
-      const changeFooterText = function (newText) {
+      let footerText = document.querySelector("footer p")
 
-        let footerText = document.getElementsByTagName("p")
-        for (i = 0; i < footerText.length; i++)
-        footerText[1].innerText = newText
+      function changeFooterText () {
+
+        footerText.innerText = "Change text pls"
       };
+
+      footerText.addEventListener("click", changeFooterText)
 
       /* EXERCISE 11
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.

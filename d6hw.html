@@ -39,35 +39,35 @@
             <td>New Apple iPhone 12 Pro (256GB) - Pacific Blue</td>
             <td><img height="100" width="100" src="pics\iphone-12-pro-family-hero.jfif" alt="Image not availablein your browser"></td>
             <td><a href="https://amzn.to/3licZwr">Amazon link</a></td>
-            <td>£1100</td>
+            <td class="price">£1100</td>
           </tr>
           <tr>
             <td>Galaxy S10 </td>
             <td>Samsung Galaxy S10 Mobile Phone; Sim Free Smartphone - Prism Black (UK Version)</td>
             <td><img height="100" width="100" src="pics\samsung s10.jfif" alt="Image not available in your browser"></td>
             <td><a href="https://amzn.to/2OXzf2c">Amazon link</a></td>
-            <td>£500</td>
+            <td class="price">£500</td>
           </tr>
           <tr>
             <td>Huawei P30</td>
             <td>Huawei P30 Pro 128 GB 6.47 Inch OLED Display Smartphone with Leica Quad AI Camera, 8GB RAM, EMUI 9.1.0 Sim-Free Android Mobile Phone, Single SIM, Aurora, UK Version</td>
             <td><img height="80" width="80" src= "pics\p30.jfif" alt="Image not available in your browser"></td>
             <td><a href="https://amzn.to/3qNCJSm">Amazon link</a></td>
-            <td>£450</td>
+            <td class="price">£450</td>
           </tr>
           <tr>
             <td>Xiaomi Redmi Note 9 </td>
             <td>Xiaomi Redmi Note 9 4GB/128GB Midnight Grey (UK Version + Official 2 Year Warranty)</td>
             <td><img height="100" width="100" src="pics\red note 9.jfif" alt="Image not available in your browser"></td>
             <td><a href="https://www.amazon.co.uk/Xiaomi-Midnight-Version-Official-Warranty/dp/B08HJLGGX4/ref=sr_1_3?dchild=1&keywords=xiaomi+redmi+note+9&qid=1615819008&sr=8-3">Amazon link</a></td>
-            <td>£130</td>
+            <td class="price">£130</td>
           </tr>
           <tr>
             <td>Nokia 2.4</td>
             <td>Nokia 2.4 6.5 Inch Android UK SIM-Free Smartphone with 2GB RAM and 32GB Storage (Dual SIM) - Fjord</td>
             <td><img height="100" width="100" src="pics\nokia-2-4-.jpg" alt="Image not available in your browser"></td>
             <td><a href="https://www.amazon.co.uk/Nokia-Android-SIM-Free-Smartphone-Storage/dp/B08J7GFSGV/ref=sr_1_3?dchild=1&keywords=nokia&qid=1615803966&sr=8-3">Amazon link</a></td>
-            <td>£100</td>
+            <td class="price">£100</td>
           </tr>
     </table>
 
@@ -107,8 +107,59 @@
   
         }
 
-    
+        const toggleImages = function(){
+          let images = document.getElementsByTagName("img")
+          for(i=0; i<images.length; i++)
+          images[i].style.display === "none" ? images[i].style.display = "block": images[i].style.display = "none"
+        }
+
+        function getRandomColor() {
+      const red = Math.round(Math.random() * 255);
+      const green = Math.round(Math.random() * 255);
+      const blue = Math.round(Math.random() * 255);
+
+      return "rgb(" + red + ", " + green + ", " + blue + ")";
+    }
+
+        const changePriceColor = function(){
+          const color = getRandomColor();
+          price = document.getElementsByClassName("price")
+        
+          for(i = 0; i < price.length; i++)
+          price[i].style.color = color
+}
         
     </script>
 </body>
 </html>
+
+
+<!-- You have been assigned to the creation of a Smartphone Shop Website. The homepage you're about to write is just a showcase of the products of the shop with some extra information. No shopping cart / checkout features are required.
+
+Complete exercises from 1 to 6 with just plain HTML.
+
+EX1.: Add an h1 tag with the name of your shop
+
+EX2.: Add a TABLE with the top 5 products of your shop
+
+EX3.: Insert for each product an image, a title, a description and a price
+
+EX4.: Add links to existing Amazon products for each item in the table
+
+EX5.: Add a footer with the address and the name of your shop
+
+EX6.: Add a message board where the user can type a message in it (no real posting/saving features required!)
+
+EXTRA (use JavaScript code here)
+
+EX7.: Write a function to change the h1 text
+
+EX8.: Write a function to change the page background color
+
+EX9.: Write a function to change the footer address with a fake one
+
+EX10.: Write a function to add a CSS class to every Amazon link
+
+EX11: Write a function to toggle a CSS class for all the images in the table; that class should set the visibility of the image
+
+EX12: Write a function to color the price of each product in a different one every time it's invoked --> 
